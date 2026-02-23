@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Service</title>
+<link rel="icon" type="image/png" href="Assets/446101658_424200780505607_5253480664752293322_n.jpg">
+</head>
+<style>
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.design-parallax {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 160px 20px;
+    color: white;
+}
+
+.design-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.85)
+    );
+    z-index: 1;
+}
+
+.design-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.design-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 100px auto;
+}
+
+.design-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.design-header p {
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+/* CARD GRID */
+.design-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* CARD */
+.design-card {
+    background: rgba(255,255,255,0.96);
+    color: #1a1a1a;
+    padding: 45px;
+    border-radius: 14px;
+    border-top: 4px solid #8B0000;
+    transition: 0.4s ease;
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+.design-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.design-card span {
+    font-size: 34px;
+    font-weight: bold;
+    color: #8B0000;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.design-card h3 {
+    margin-bottom: 15px;
+}
+
+.design-card p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Reveal animation */
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.8s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .design-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .design-header h1 {
+        font-size: 30px;
+    }
+}
+/* CARD HOVER ENHANCEMENT */
+.design-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.design-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4px;
+    background: #8B0000;
+    transition: 0.4s ease;
+}
+
+.design-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.design-card:hover::after {
+    width: 100%;
+}
+
+/* CTA SECTION */
+.design-cta {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #8B0000;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: white;
+    color: #8B0000;
+    box-shadow: 0 10px 30px rgba(139,0,0,0.4);
+    transform: translateY(-4px);
+}
+</style>
+
+<body>
+<section class="design-parallax">
+
+    <div class="design-overlay"></div>
+
+    <div class="design-wrapper">
+
+        <div class="design-header">
+            <h1>Interior Design Service</h1>
+            <p>
+                “Pendekatan desain yang sistematis, fungsional, dan berorientasi pada kualitas jangka panjang, di mana setiap tahap dirancang secara terstruktur mulai dari analisis kebutuhan hingga detail teknis, dengan mempertimbangkan estetika, kenyamanan, efisiensi ruang, serta keberlanjutan material, sehingga menghasilkan solusi interior yang tidak hanya indah secara visual, tetapi juga relevan, tahan lama, dan mampu mendukung aktivitas serta karakter pengguna di dalamnya.”
+            </p>
+        </div>
+
+        <div class="design-cards">
+
+            <div class="design-card reveal">
+                <span>01</span>
+                <h3>Analisis Kebutuhan</h3>
+                <p>Memahami karakter ruang dan kebutuhan pengguna.</p>
+            </div>
+
+            <div class="design-card reveal">
+                <span>02</span>
+                <h3>Perencanaan Konsep</h3>
+                <p>Penyusunan layout, visual, dan arah desain proyek.</p>
+            </div>
+
+            <div class="design-card reveal">
+                <span>03</span>
+                <h3>Detail Teknis</h3>
+                <p>Gambar kerja dan spesifikasi material presisi.</p>
+            </div>
+
+            <div class="design-card reveal">
+                <span>04</span>
+                <h3>Finalisasi</h3>
+                <p>Revisi dan persetujuan sebelum produksi.</p>
+            </div>
+
+        </div>
+        <div class="design-cta">
+            <a href="index.html" class="cta-button">Start Your Project</a>
+        </div>
+    </div>
+    
+
+</section>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const visiblePoint = 100;
+
+        if (elementTop < windowHeight - visiblePoint) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+</body>
+</html>
